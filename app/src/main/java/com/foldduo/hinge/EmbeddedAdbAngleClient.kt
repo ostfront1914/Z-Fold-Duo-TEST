@@ -142,7 +142,7 @@ class EmbeddedAdbAngleClient(
         private const val ANGLE_LOG_COMMAND =
             "logcat -v brief -T 1 --regex='(onCommand: action\\[$ANGLE_ACTION\\], mCurrentAngle|" +
                 "unregisterSensor: mIsSensorRegistered\\[true\\])' " +
-                "'SprWallpaper|FoldInteractive':I '*:S'"
+"'SprWallpaper:I' 'FoldInteractive:I' '*:S'"
         private const val LIVE_CAPTURE_COMMAND =
             "CLASSPATH=${'$'}(pm path com.foldduo.hinge | head -n 1 | cut -d: -f2) " +
                 "exec app_process /system/bin com.foldduo.hinge.capture.LiveCaptureBridge"
